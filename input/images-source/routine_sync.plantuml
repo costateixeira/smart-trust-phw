@@ -17,7 +17,6 @@ loop routine synchronization
   Issuer -> Issuer : generate public-private key pairs\nfor signing VDHCs or VHLs,\n or mTLS
   Issuer -> TrustNetworkAnchor: send public keys			
   deactivate Issuer
-  ... time passes ...					
   TrustNetworkAnchor -> TrustNetworkAnchor: Validate keys\n and publish at distribution endpoint
   ... time passes ...		
 
