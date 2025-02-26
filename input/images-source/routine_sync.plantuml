@@ -21,7 +21,7 @@ loop routine synchronization
   ... time passes ...		
 
   TrustNetworkParticipant -> TrustNetworkAnchor: Retrieve keys
-  deactivate TrustNetworkParticipantt		 			
+  deactivate TrustNetworkParticipant
   deactivate TrustNetworkAnchor		 			
 end
 
