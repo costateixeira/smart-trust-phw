@@ -1,8 +1,8 @@
 id: smart.who.int.trust-phw
 canonical: http://smart.who.int/trust-phw
-name: IGEmpty
-title: Empty IG
-description: An empty Implementation Guide to be used as a starting point for building SMART Guidelines Implementation Guides
+name: trust-phw
+title: GDHCN Trust Network - Personal Health Wallet 
+description: Describes common workflows and specifications for usage of personal health wallets on the WHO GDHCN Trust Network
 status: draft # draft | active | retired | unknown
 experimental: false
 version: 0.1.0
