@@ -18,6 +18,8 @@ Alias: $DocumentationSection = http://smart.who.int/trust-phw/CodeSystem/Documen
 Alias: $SGActor = http://smart.who.int/trust-phw/StructureDefinition/SGActor
 Alias: $SGActorExt = http://smart.who.int/trust-phw/StructureDefinition/SGActorExt
 
+Alias: $SatisfiesExt = http://smart.who.int/trust-phw/StructureDefinition/Satisfies
+
 Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
 
 // Alias: $TrustNetworkParticipant = http://smart.who.int/trust/ActorDefinition/TrustNetworkParticipant
