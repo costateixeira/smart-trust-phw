@@ -7,7 +7,7 @@ Usage: #definition
 * status = $pubStatus#active
 * publisher = "WHO"
 * description = "Publish trust material to a Trust Anchor"
-* actor[+] = Canonical(TrustNetworkParticipant)
+* actor[+] = $TrustNetworkParticipant
 
 
 
@@ -18,7 +18,7 @@ Usage: #definition
 * status = $pubStatus#active
 * publisher = "WHO"
 * description = "Receive trust material from a Trust Network Participant, for distribution within the Trust Network"
-* actor[+] = Canonical(TrustNetworkAnchor)
+* actor[+] = $TrustNetworkAnchor
 
 Instance:   distribute-pki-material
 InstanceOf: Requirements
@@ -27,7 +27,7 @@ Usage: #definition
 * status = $pubStatus#active
 * publisher = "WHO"
 * description = "Make received trust material available through a distrubution point to a Trust Network Participant"
-* actor[+] = Canonical(TrustNetworkAnchor)
+* actor[+] = $TrustNetworkAnchor
 
 Instance:   retrieve-pki-material
 InstanceOf: Requirements
@@ -36,7 +36,7 @@ Usage: #definition
 * status = $pubStatus#active
 * publisher = "WHO"
 * description = "Retrieve PKI material from a distribution point"
-* actor[+] = Canonical(TrustNetworkParticipant)
+* actor[+] = $TrustNetworkParticipant
 
 
 
