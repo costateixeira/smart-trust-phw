@@ -20,5 +20,5 @@ Alias: $SGActorExt = http://smart.who.int/trust-phw/StructureDefinition/SGActorE
 
 Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
 
-Alias: $TrustNetworkParticipant = http://smart.who.int/trust/ActorDefinition/TrustNetworkParticipant
-Alias: $TrustNetworkAnchor = http://smart.who.int/trust/ActorDefinition/TrustNetworkAnchor
+// Alias: $TrustNetworkParticipant = http://smart.who.int/trust/ActorDefinition/TrustNetworkParticipant
+// Alias: $TrustNetworkAnchor = http://smart.who.int/trust/ActorDefinition/TrustNetworkAnchor
