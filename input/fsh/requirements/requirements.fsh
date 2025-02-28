@@ -37,6 +37,7 @@ Usage: #definition
 * publisher = "WHO"
 * description = "Retrieve PKI material from a distribution point"
 * actor[+] = Canonical(TrustNetworkParticipant)
+* actor[+] = Canonical(TrustNetworkAnchor)
 
 
 
