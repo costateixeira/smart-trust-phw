@@ -17,3 +17,5 @@ Alias: $SGcode = http://smart.who.int/base/StructureDefinition/Sgcode
 Alias: $DocumentationSection = http://smart.who.int/trust-phw/CodeSystem/DocumentationSection
 Alias: $SGActor = http://smart.who.int/trust-phw/StructureDefinition/SGActor
 Alias: $SGActorExt = http://smart.who.int/trust-phw/StructureDefinition/SGActorExt
+
+Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
