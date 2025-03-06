@@ -46,11 +46,11 @@ dependencies:
    version: 3.8.0
 
   smart.who.int.pcmt:
-    version: dev
+    version: current
   smart.who.int.base:
     id: sb
 #    version: 0.1.0
-    version: dev
+    version: current
     reason: This IG uses SMART base computable guideline capabilities
 #  smart.who.int.trust:
 #    id: trust
