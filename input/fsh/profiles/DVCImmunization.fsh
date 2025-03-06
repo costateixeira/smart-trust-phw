@@ -39,7 +39,7 @@ Description: "This profile represents a vaccination record for Digital Vaccine C
 //* protocolApplied[protocolAppliedAuthority].doseNumber[x] 1..1 MS
 //* protocolApplied[protocolAppliedAuthority].doseNumber[x].extension contains $doseNumberCodeableConcept named DoseNumberCodeableConcept 1..1
 * extension contains ProductID named productID 1..1 MS
-* extension[productID] obeys has-a-product-id-code
+// * extension[productID] obeys has-a-product-id-code
 // * extension[productID] obeys is-a-prequal-product-id
 // * vaccineCode obeys has-a-prequal-vaccine-type
 
