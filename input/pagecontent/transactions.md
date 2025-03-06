@@ -5,8 +5,8 @@
 A Holder requests an Issuer to generate a VHL"
 
 <ul>
- <li>Source: <a href="system-actors.html#Holder"/>Holder</></li>
- <li>Target: <a href="system-actors.html#Issuer"/>Issuer</></li>
+ <li>Source: <a href="system-actors.html#Holder"/>Holder</a></li>
+ <li>Target: <a href="system-actors.html#Issuer"/>Issuer</a></li>
 </ul>
 
 
