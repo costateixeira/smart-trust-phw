@@ -10,7 +10,9 @@ InstanceOf: SGTransaction
 * start = #ActorDefinition
 
 * extension[node][source].extension[actor].valueReference = Reference(Holder)
+* extension[node][source].extension[type].valueCode = #ActorDefinition
 * extension[node][target].extension[actor].valueReference = Reference(Issuer)
+* extension[node][target].extension[type].valueCode = #ActorDefinition
 
 * link[+].extension[requestTrigger].extension[doc].valueMarkdown = """
 A Holder wishes to request a VHL from an Issuer.
