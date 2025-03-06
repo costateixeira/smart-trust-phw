@@ -29,3 +29,13 @@ Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
 
 // Alias: $TrustNetworkParticipant = http://smart.who.int/trust/ActorDefinition/TrustNetworkParticipant
 // Alias: $TrustNetworkAnchor = http://smart.who.int/trust/ActorDefinition/TrustNetworkAnchor
+
+Alias: $PreQualProductIDs = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
+Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
+
+
+Alias: $PreQualVaccineType = http://smart.who.int/icvp/ValueSet/PreQualVaccineType
+
+Alias: $PreQualProductIDsVS = http://smart.who.int/pcmt-vaxprequal/ValueSet/PreQualProductIDs
+
+Alias: $identifierType = http://terminology.hl7.org/CodeSystem/v2-0203

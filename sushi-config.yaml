@@ -47,6 +47,8 @@ dependencies:
 
   smart.who.int.pcmt:
     version: current
+  smart.who.int.pcmt-vaxprequal:
+    version: current
   smart.who.int.base:
     id: sb
 #    version: 0.1.0
