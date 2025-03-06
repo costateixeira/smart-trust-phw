@@ -1,6 +1,6 @@
 Instance: GenerateVHL
 InstanceOf: SGTransaction
-* title = "Generate VHL Request"
+//* title = "Generate VHL Request"
 * description = "A Holder requests an Issuer to generate a VHL"
 * name = "GenerateVHL"
 * status = #active
