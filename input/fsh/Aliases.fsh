@@ -1,4 +1,5 @@
 Alias: $SCT = http://snomed.info/sct
+Alias: $LOINC = http://loinc.org
 Alias: $LNC = http://loinc.org
 Alias: $ICD11 = http://id.who.int/icd/release/11/mms
 Alias: $ICD10 = http://hl7.org/fhir/sid/icd-10
@@ -14,11 +15,15 @@ Alias: $pubStatus = http://hl7.org/fhir/publication-status
 Alias: $actorType = http://hl7.org/fhir/examplescenario-actor-type
 Alias: $SGcode = http://smart.who.int/base/StructureDefinition/Sgcode
 
-Alias: $DocumentationSection = http://smart.who.int/trust-phw/CodeSystem/DocumentationSection
-Alias: $SGActor = http://smart.who.int/trust-phw/StructureDefinition/SGActor
-Alias: $SGActorExt = http://smart.who.int/trust-phw/StructureDefinition/SGActorExt
+Alias: $DocumentationSection = http://smart.who.int/base/CodeSystem/DocumentationSection
+Alias: $SGActor = http://smart.who.int/base/StructureDefinition/SGActor
+Alias: $SGActorExt = http://smart.who.int/base/StructureDefinition/SGActorExt
 
-Alias: $SatisfiesExt = http://smart.who.int/trust-phw/StructureDefinition/Satisfies
+Alias: $SatisfiesExt = http://smart.who.int/base/StructureDefinition/Satisfies
+
+Alias: $DisclosureStatements = http://smart.who.int/trust-phw/CodeSystem/DisclosureStatements
+Alias: $SelectiveDisclosure = http://smart.who.int/trust-phw/StructureDefinition/SelectiveDisclosure
+Alias: $nationality = http://hl7.org/fhir/StructureDefinition/patient-nationality
 
 Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
 
