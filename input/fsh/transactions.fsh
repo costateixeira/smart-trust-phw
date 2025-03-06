@@ -7,6 +7,8 @@ InstanceOf: SGTransaction
 * experimental = true
 * publisher = "WHO"
 
+* start = #ActorDefinition
+
 * node[source].extension[actor].valueReference = Reference(Holder)
 * node[target].extension[actor].valueReference = Reference(Issuer)
 
