@@ -44,6 +44,8 @@ dependencies:
    uri: https://profiles.ihe.net/ITI/mCSD/ImplementationGuide/ihe.iti.mcsd 
    version: 3.8.0
 
+  smart.who.int.pcmt:
+    version: dev
   smart.who.int.base:
     id: sb
 #    version: 0.1.0
