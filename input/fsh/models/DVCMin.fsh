@@ -45,6 +45,7 @@ Description:     "Mininmial DVC payload for use within an HCERT Payload using th
 Logical: DVCMinPreQual
 Parent:  DVCMin
 Description: "Mininmial DVC payload for use within an HCERT Payload with the WHO PreQual Vaccine Database"
+* ^abstract = false
 * v only DVCMinVaccineDetailsPreQual
 
 Invariant: must-have-issuer-or-clinician-name
