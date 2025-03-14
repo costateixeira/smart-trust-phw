@@ -3,9 +3,6 @@ Alias: $identifierType = http://terminology.hl7.org/CodeSystem/v2-0203
 Logical:         DVCMin
 Title:           "DVC HCERT Payload for PreQual DB"
 Description:     "Mininmial DVC payload for use within an HCERT Payload using the WHO PreQual Vaccine PreQual Database"
-
-* ^url = "http://smart.who.int/icvp/StructureDefinition/DVCPayload"
-* ^version = "1"
 * ^status = #draft
 * ^abstract = true
 * n 1..1 string "Person name"
@@ -32,10 +29,9 @@ Logical:         DVCMinPreQual
 Parent:          DVCMin
 Title:           "DVC HCERT Payload for PreQual DB"
 Description:     "Mininmial DVC payload for use within an HCERT Payload using the WHO PreQual Vaccine PreQual Database"
-* ^url = "http://smart.who.int/icvp/StructureDefinition/DVCPayload"
 * ^version = "1"
 * ^status = #draft
-* ^abstract = true
+* ^abstract = false
 * v.vp from PreQualProductIds (required)
 
 Invariant: must-have-issuer-or-clinician-name
