@@ -32,7 +32,7 @@ Description:     "Mininmial DVC payload for use within an HCERT Payload using th
 * ^version = "1"
 * ^status = #draft
 * ^abstract = false
-* v.vp from PreQualProductIds (required)
+* v.vp from $PreQualProductIdsVS (required)
 
 Invariant: must-have-issuer-or-clinician-name
 Description: "Either issuer or clinicianName must be present"

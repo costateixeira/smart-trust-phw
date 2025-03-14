@@ -32,7 +32,7 @@ Alias: $HLType = http://smart.who.int/trust-phw/CodeSystem/HL.TYPE
 
 Alias: $PreQualProductIDs = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
 Alias: $PreQualProductIds = http://smart.who.int/pcmt-vaxprequal/CodeSystem/PreQualProductIDs
-
+Alias: $PreQualProductIdsVS = http://smart.who.int/pcmt-vaxprequal/ValueSet/PreQualProductIds
 
 Alias: $PreQualVaccineType = http://smart.who.int/icvp/ValueSet/PreQualVaccineType
 
