@@ -7,6 +7,7 @@ Usage: #definition
 * contained[+] = http://terminology.hl7.org/ValueSet/v3-Country
 * contained[+] = DVCRelationshipStatus
 * contained[+] = PreQualProductIds
+* contained[+] = http://terminology.hl7.org/ValueSet/v2-0203
 
 * insert Question(name, Full Name of the client, string, false, true)
 * insert Question(dob, Date of Birth, date, false, true)
@@ -15,6 +16,8 @@ Usage: #definition
 * insert Question(nationality, Nationality, choice, false, false)
 * item[=].answerValueSet = "http://terminology.hl7.org/ValueSet/v3-Country" 
 * insert Question(nid, National Identification Document, string, false, false)
+* insert Question(ndt, National ID Document Type, choice, false, false)
+* item[=].answerValueSet = $identifierTypeVS
 * insert Question(guardian, Parent or Guardian Details, group, false, false)
 * item[=]
   * insert Question(guardianName, Name of Parent or Guardian, string, false, false)
@@ -24,7 +27,7 @@ Usage: #definition
   * item[=].answerValueSet = $PreQualProductIDsVS
   * insert Question(date, Date of Vaccination, date, false, true)
   * insert Question(clinicianName, Name of supervising clinician, string, false, false)
-  * insert Question(issuer, Relevant authoring reponsible for issuing the certificate\, or for overseeing the administration center, string, false, false)
+  * insert Question(issuer, Relevant authoring responsible for issuing the certificate\, or for overseeing the administration center, string, false, false)
   * insert Question(batchNo.text , Batch Number, string, false, true )
   * insert Question(validityPeriod, Certificate Validity Period, group, false, false)
   * item[=]
