@@ -6,7 +6,7 @@ A Health Link URI is generated from this payload according to the algorithm docu
 
 
 "
-* ^url = "http://hl7.org/fhir/uv/trust-phw/StructureDefinition/HealthLinkPayload"
+//* ^url = "http://hl7.org/fhir/uv/trust-phw/StructureDefinition/HealthLinkPayload"
 * ^version = "RC2"
 * ^status = #draft
 *  url 1..1 string "url" "Manifest URL for this Health Link"
