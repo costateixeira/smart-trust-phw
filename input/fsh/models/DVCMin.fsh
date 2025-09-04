@@ -11,7 +11,7 @@ Description:     "Mininmial DVC payload for use within an HCERT Payload"
 * ntl 0..1 code "Nationality"
 * nid 0..1 string "National Identification Document"
 * ndt 0..1 code "National ID Document Type"
-* ndt from $identifierType (extensible)
+* ndt from $identifierTypeVS (extensible)
 * gn 0..1 string "Parent or Guardian Name"
 * v 1..* DVCMinVaccineDetails "Vaccine Details" "Vaccine Details"
 
