@@ -1,0 +1,66 @@
+openapi: 3.0.3
+info:
+  title: PreQual API
+  description: Data elements for the Digital Vaccine Certificate using WHO Vaccine
+    PreQualification database
+  version: 1.0.0
+paths:
+  /StructureDefinition-PreQualDVC.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model StructureDefinition-PreQualDVC
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model StructureDefinition-PreQualDVC.
+      responses:
+        '200':
+          description: The JSON Schema for StructureDefinition-PreQualDVC
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./StructureDefinition-PreQualDVC.schema.json
+components:
+  schemas:
+    StructureDefinition-PreQualDVC:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/trust-phw/StructureDefinition-PreQualDVC.schema.json
+      title: PreQual
+      description: Data elements for the Digital Vaccine Certificate using WHO Vaccine
+        PreQualification database
+      type: object
+      properties:
+        name:
+          type: string
+          description: The full name of the client
+        dob:
+          type: string
+          format: date
+          description: Date of Birth
+        sex:
+          type: string
+          description: Sex
+        nationality:
+          type: string
+          description: Nationality
+        nid:
+          type: object
+          description: National Identification Document
+        ndt:
+          $ref: ValueSet-v2-0203.schema.json
+          description: National ID Document Type
+        guardian:
+          type: string
+          description: Name of Parent or Guardian
+        issuer:
+          type: object
+          description: Document issuer
+        vaccineDetails:
+          type: array
+          items:
+            $ref: http://smart.who.int/trust-phw/StructureDefinition-PreQualVaccineDetails.schema.json
+          minItems: 1
+          description: Vaccine Details
+      required:
+      - name
+      - dob
+      - vaccineDetails
+      fhir:logicalModel: http://smart.who.int/trust-phw/StructureDefinition/PreQualDVC
+      fhir:parent: http://smart.who.int/trust-phw/StructureDefinition/DVC

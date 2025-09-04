@@ -1,0 +1,25 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/trust-phw/ValueSet-DisclosureStatements.schema.json",
+  "title": "Disclosure Statements Schema",
+  "description": "JSON Schema for Disclosure Statements ValueSet codes. Generated from FHIR expansions.",
+  "type": "string",
+  "enum": [
+    "disclose-icvp",
+    "disclose-icvp-narrative",
+    "disclose-icvp-demographic",
+    "disclose-icvp-demographic-narrative",
+    "disclose-icvp-demographic-name",
+    "disclose-icvp-demographic-sex",
+    "disclose-icvp-demographic-dob",
+    "disclose-icvp-demographic-nationality",
+    "disclose-icvp-demographic-national-id",
+    "disclose-icvp-vaccination",
+    "disclose-icvp-vaccination-narrative",
+    "disclose-icvp-vaccination-clinician",
+    "disclose-icvp-vaccination-issuer"
+  ],
+  "fhir:valueSet": "http://smart.who.int/trust-phw/ValueSet/DisclosureStatements",
+  "fhir:version": "0.1.0",
+  "fhir:expansionTimestamp": "2025-09-04T20:39:15+00:00"
+}

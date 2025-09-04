@@ -1,0 +1,53 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/trust-phw/StructureDefinition-DVCMinPreQual.schema.json",
+  "title": "",
+  "description": "DVC payload mininmized  for use within an HCERT Payload with the WHO PreQual Vaccine Database",
+  "type": "object",
+  "properties": {
+    "n": {
+      "type": "string",
+      "description": "Person name"
+    },
+    "dob": {
+      "type": "string",
+      "format": "date",
+      "description": "Date of birth in YYYY-MM-DD format"
+    },
+    "s": {
+      "type": "string",
+      "description": "Sex"
+    },
+    "ntl": {
+      "type": "string",
+      "description": "Nationality"
+    },
+    "nid": {
+      "type": "string",
+      "description": "National Identification Document"
+    },
+    "ndt": {
+      "$ref": "ValueSet-v2-0203.schema.json",
+      "description": "National ID Document Type"
+    },
+    "gn": {
+      "type": "string",
+      "description": "Parent or Guardian Name"
+    },
+    "v": {
+      "type": "array",
+      "items": {
+        "$ref": "http://smart.who.int/trust-phw/StructureDefinition-DVCMinVaccineDetailsPreQual.schema.json"
+      },
+      "minItems": 1,
+      "description": "Vaccine Details"
+    }
+  },
+  "required": [
+    "n",
+    "dob",
+    "v"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/trust-phw/StructureDefinition/DVCMinPreQual",
+  "fhir:parent": "http://smart.who.int/trust-phw/StructureDefinition/DVCMin"
+}

@@ -1,0 +1,59 @@
+openapi: 3.0.3
+info:
+  title: DVC HCert Vaccine Details (Minimal) API
+  description: DVC Vaccine Details for a ininmial DVC payload for use within an HCERT
+    Payload
+  version: 1.0.0
+paths:
+  /StructureDefinition-DVCMinVaccineDetails.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model StructureDefinition-DVCMinVaccineDetails
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model StructureDefinition-DVCMinVaccineDetails.
+      responses:
+        '200':
+          description: The JSON Schema for StructureDefinition-DVCMinVaccineDetails
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./StructureDefinition-DVCMinVaccineDetails.schema.json
+components:
+  schemas:
+    StructureDefinition-DVCMinVaccineDetails:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/trust-phw/StructureDefinition-DVCMinVaccineDetails.schema.json
+      title: DVC HCert Vaccine Details (Minimal)
+      description: DVC Vaccine Details for a ininmial DVC payload for use within an
+        HCERT Payload
+      type: object
+      properties:
+        vp:
+          type: string
+          description: ICVP Product Catalog ID
+        dt:
+          type: string
+          format: date
+          description: Date of vaccination, YYYY-MM-DD format
+        cn:
+          type: string
+          description: Name of supervising clinician
+        is:
+          type: string
+          description: Certificate issuer id (referenced organization)
+        bo:
+          type: string
+          description: Batch No
+        vls:
+          type: string
+          format: date
+          description: Certificate Validity periods start date
+        vle:
+          type: string
+          format: date
+          description: Certificate Validity periods end date
+      required:
+      - vp
+      - dt
+      - bo
+      fhir:logicalModel: http://smart.who.int/trust-phw/StructureDefinition/DVCMinVaccineDetails
+      fhir:parent: http://hl7.org/fhir/StructureDefinition/Base

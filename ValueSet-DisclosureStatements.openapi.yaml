@@ -1,0 +1,45 @@
+openapi: 3.0.3
+info:
+  title: Disclosure Statements Schema API
+  description: JSON Schema for Disclosure Statements ValueSet codes. Generated from
+    FHIR expansions.
+  version: 1.0.0
+paths:
+  /ValueSet-DisclosureStatements.schema.json:
+    get:
+      summary: JSON Schema definition for the enumeration ValueSet-DisclosureStatements
+      description: This endpoint serves the JSON Schema definition for the enumeration
+        ValueSet-DisclosureStatements.
+      responses:
+        '200':
+          description: The JSON Schema for ValueSet-DisclosureStatements
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./ValueSet-DisclosureStatements.schema.json
+components:
+  schemas:
+    ValueSet-DisclosureStatements:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/trust-phw/ValueSet-DisclosureStatements.schema.json
+      title: Disclosure Statements Schema
+      description: JSON Schema for Disclosure Statements ValueSet codes. Generated
+        from FHIR expansions.
+      type: string
+      enum:
+      - disclose-icvp
+      - disclose-icvp-narrative
+      - disclose-icvp-demographic
+      - disclose-icvp-demographic-narrative
+      - disclose-icvp-demographic-name
+      - disclose-icvp-demographic-sex
+      - disclose-icvp-demographic-dob
+      - disclose-icvp-demographic-nationality
+      - disclose-icvp-demographic-national-id
+      - disclose-icvp-vaccination
+      - disclose-icvp-vaccination-narrative
+      - disclose-icvp-vaccination-clinician
+      - disclose-icvp-vaccination-issuer
+      fhir:valueSet: http://smart.who.int/trust-phw/ValueSet/DisclosureStatements
+      fhir:version: 0.1.0
+      fhir:expansionTimestamp: '2025-09-04T20:39:15+00:00'

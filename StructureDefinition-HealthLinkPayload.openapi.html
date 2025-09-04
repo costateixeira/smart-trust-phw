@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Health Link Payload (DRAFT) Documentation</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&display=swap');
+        
+        /* WHO SMART Trust inspired styling */
+        :root {
+            --navbar-bg-color: #00477d;
+            --ig-header-color: #f6f7f9;
+            --footer-bg-color: #505050;
+            --footer-container-bg-color: #00477d;
+            --btn-hover-color: #0070A1;
+            --toc-box-border: navy;
+            --toc-box-bg-color: #f6f7f9;
+        }
+        
+        body {
+            font-family: 'Noto Sans', sans-serif !important;
+            margin: 0;
+            padding: 0;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            height: fit-content !important;
+        }
+        
+        .container {
+            width: 100% !important;
+            max-width: none !important;
+            background-color: var(--toc-box-bg-color) !important;
+            color: #000 !important;
+            padding: 0 20px;
+        }
+        
+        @media (min-width: 2200px) {
+            .container {
+                max-width: 1980px !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+            }
+        }
+        
+        /* Header segment matching SMART Trust */
+        #segment-header {
+            display: block;
+        }
+        
+        #segment-navbar {
+            background-color: var(--navbar-bg-color) !important;
+        }
+        
+        #segment-navbar .container {
+            background-color: var(--navbar-bg-color) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 20px;
+            min-height: 50px;
+        }
+        
+        #project-nav {
+            flex: 0 0 auto;
+            margin-right: auto;
+            line-height: 50px;
+            margin-top: 4px;
+            margin-bottom: 4px;
+            color: #808080;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            padding: 0 20px;
+        }
+        
+        #project-nav a {
+            color: #e6e6e6;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        
+        #project-nav a:hover {
+            color: #ffffff;
+        }
+        
+        .header-container {
+            background-color: var(--ig-header-color) !important;
+            position: relative;
+            z-index: 10;
+            box-shadow: 0px 6px 8px rgba(130, 130, 13, 0.1) !important;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        #ig-status {
+            flex-grow: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            position: relative;
+        }
+        
+        #ig-status p {
+            background-color: white;
+            padding: 10px 17px;
+            border-radius: 5px;
+            position: relative;
+            z-index: 2;
+            margin: 0;
+        }
+        
+        .content-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+        
+        .section {
+            background: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+            margin-bottom: 2rem;
+            overflow: hidden;
+        }
+        
+        .section-header {
+            background-color: #f8f9fa;
+            padding: 1rem 1.5rem;
+            border-bottom: 1px solid #dee2e6;
+        }
+        
+        .section-header h2 {
+            margin: 0;
+            color: #00477d;
+            font-size: 1.5rem;
+            font-weight: 500;
+        }
+        
+        .section-content {
+            padding: 1.5rem;
+        }
+        
+        .endpoint {
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            margin-bottom: 1rem;
+            overflow: hidden;
+        }
+        
+        .endpoint-header {
+            background-color: #28a745;
+            color: white;
+            padding: 0.5rem 1rem;
+            font-weight: 500;
+            font-family: monospace;
+        }
+        
+        .endpoint-content {
+            padding: 1rem;
+        }
+        
+        .schema-display {
+            background-color: #f8f9fa;
+            border: 1px solid #e9ecef;
+            border-radius: 4px;
+            padding: 1rem;
+            font-family: monospace;
+            white-space: pre-wrap;
+            overflow-x: auto;
+            max-height: 400px;
+            overflow-y: auto;
+        }
+        
+        .property {
+            margin-bottom: 0.5rem;
+        }
+        
+        .property-name {
+            font-weight: 600;
+            color: #00477d;
+        }
+        
+        .property-type {
+            color: #6f42c1;
+            font-family: 'Noto Sans', monospace;
+        }
+        
+        .property-description {
+            color: #666;
+            margin-top: 0.25rem;
+        }
+        
+        .enum-values {
+            background-color: #e7f3ff;
+            border: 1px solid #b8daff;
+            border-radius: 4px;
+            padding: 0.5rem;
+            margin-top: 0.5rem;
+        }
+        
+        .enum-value {
+            display: inline-block;
+            background-color: #00477d;
+            color: white;
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            margin: 0.2rem;
+            font-family: 'Noto Sans', monospace;
+            font-size: 0.9rem;
+        }
+        
+        h1, h2, h3, h4, h5, h6 {
+            font-family: 'Noto Sans', sans-serif !important;
+            color: #000 !important;
+        }
+        
+        td, p, li {
+            font-family: 'Noto Sans', sans-serif !important;
+        }
+    </style>
+</head>
+<body>
+    <div id="segment-header" class="segment">
+        <div id="segment-navbar" class="segment">
+            <div class="container">
+                <div id="project-nav">
+                    <a href="../index.html">Return to SMART Guideline</a>
+                </div>
+            </div>
+        </div>
+        
+        <div class="container header-container">
+            <div id="ig-status">
+                <p><span style="font-size:12pt;font-weight:bold">Health Link Payload (DRAFT) Documentation</span>
+                    <br/>
+                    <span style="display:inline-block;">Generated from: StructureDefinition-HealthLinkPayload.openapi.yaml</span>
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <div class="content-container">
+
+        <div class="section">
+            <div class="section-header">
+                <h2>API Information</h2>
+            </div>
+            <div class="section-content">
+                <h3>Health Link Payload (DRAFT) API</h3>
+                <p>Health Link Payload (DRAFT)
+
+A Health Link URI is generated from this payload according to the algorithm documented [here](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/links-specification.html#smart-health-links-sharing-application-generates-a-smart-health-link-uri)
+
+
+</p>
+                <p><strong>Version:</strong> 1.0.0</p>
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Endpoints</h2>
+            </div>
+            <div class="section-content">
+
+                <div class="endpoint">
+                    <div class="endpoint-header">
+                        GET /StructureDefinition-HealthLinkPayload.schema.json
+                    </div>
+                    <div class="endpoint-content">
+                        <h4>JSON Schema definition for the Logical Model StructureDefinition-HealthLinkPayload</h4>
+                        <p>This endpoint serves the JSON Schema definition for the Logical Model StructureDefinition-HealthLinkPayload.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="section">
+            <div class="section-header">
+                <h2>Schema Definition</h2>
+            </div>
+            <div class="section-content">
+
+                <h3>StructureDefinition-HealthLinkPayload</h3>
+                <p><strong>Description:</strong> Health Link Payload (DRAFT)
+
+A Health Link URI is generated from this payload according to the algorithm documented [here](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/links-specification.html#smart-health-links-sharing-application-generates-a-smart-health-link-uri)
+
+
+</p>
+                <p><strong>Type:</strong> <span class="property-type">object</span></p>
+
+                <h4>Properties:</h4>
+
+                <div class="property">
+                    <span class="property-name">url</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Manifest URL for this Health Link</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">key</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Decryption key for processing files returned in the manifest. 43 characters, consisting of 32 random bytes base64urlencoded.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">exp</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Optional. Number representing expiration time in Epoch seconds, as a hint to help the Health Link Receiving Application determine if this QR is stale. (Note: epoch times should be parsed into 64-bit numeric types.)</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">flag</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Optional. String created by concatenating single-character flags in alphabetical order:
+'L' indicates the Health Link is intended for long-term use and manifest content can evolve over time; 
+'P' indicates the Health Link requires a Passcode to resolves; and 'U' indicates the Health Link's url resolves to a single encrypted file accessible via GET, bypassing the manifest and SHALL NOT be used in combination with P.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">label</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Optional. String no longer than 80 characters that provides a short description of the data behind the Health Link.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">v</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Optional. Integer representing the Health Links protocol version this Health Link conforms to. MAY be omitted when the default value (1) applies.</div>
+                </div>
+
+                <div class="property">
+                    <span class="property-name">type</span>
+                    <span class="property-type">(string)</span>
+                    <div class="property-description">Classifying type code to distinguish different types of health links.  If not present then the Health Link is a SMART Health Link.</div>
+                </div>
+
+                <p><strong>Required fields:</strong> url, key</p>
+
+                <h4>Full Schema:</h4>
+                <div class="schema-display">{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "http://smart.who.int/trust-phw/StructureDefinition-HealthLinkPayload.schema.json",
+  "title": "Health Link Payload (DRAFT)",
+  "description": "Health Link Payload (DRAFT)\n\nA Health Link URI is generated from this payload according to the algorithm documented [here](https://build.fhir.org/ig/HL7/smart-health-cards-and-links/links-specification.html#smart-health-links-sharing-application-generates-a-smart-health-link-uri)\n\n\n",
+  "type": "object",
+  "properties": {
+    "url": {
+      "type": "string",
+      "description": "Manifest URL for this Health Link"
+    },
+    "key": {
+      "type": "string",
+      "description": "Decryption key for processing files returned in the manifest. 43 characters, consisting of 32 random bytes base64urlencoded."
+    },
+    "exp": {
+      "type": "string",
+      "description": "Optional. Number representing expiration time in Epoch seconds, as a hint to help the Health Link Receiving Application determine if this QR is stale. (Note: epoch times should be parsed into 64-bit numeric types.)"
+    },
+    "flag": {
+      "type": "string",
+      "description": "Optional. String created by concatenating single-character flags in alphabetical order:\n'L' indicates the Health Link is intended for long-term use and manifest content can evolve over time; \n'P' indicates the Health Link requires a Passcode to resolves; and 'U' indicates the Health Link's url resolves to a single encrypted file accessible via GET, bypassing the manifest and SHALL NOT be used in combination with P."
+    },
+    "label": {
+      "type": "string",
+      "description": "Optional. String no longer than 80 characters that provides a short description of the data behind the Health Link."
+    },
+    "v": {
+      "type": "string",
+      "description": "Optional. Integer representing the Health Links protocol version this Health Link conforms to. MAY be omitted when the default value (1) applies."
+    },
+    "type": {
+      "type": "string",
+      "description": "Classifying type code to distinguish different types of health links.  If not present then the Health Link is a SMART Health Link."
+    }
+  },
+  "required": [
+    "url",
+    "key"
+  ],
+  "fhir:logicalModel": "http://smart.who.int/trust-phw/StructureDefinition/HealthLinkPayload",
+  "fhir:parent": "http://hl7.org/fhir/StructureDefinition/Base"
+}</div>
+
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

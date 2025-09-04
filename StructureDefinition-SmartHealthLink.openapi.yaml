@@ -1,0 +1,50 @@
+openapi: 3.0.3
+info:
+  title: Smart Health Link (DRAFT) API
+  description: 'Smart Health Link URI (DRAFT)
+
+
+    Logical Model to represent a SMART Health Link as its URI.  It is generated from
+    the content of the SMART Health Link Payload.
+
+
+
+    '
+  version: 1.0.0
+paths:
+  /StructureDefinition-SmartHealthLink.schema.json:
+    get:
+      summary: JSON Schema definition for the Logical Model StructureDefinition-SmartHealthLink
+      description: This endpoint serves the JSON Schema definition for the Logical
+        Model StructureDefinition-SmartHealthLink.
+      responses:
+        '200':
+          description: The JSON Schema for StructureDefinition-SmartHealthLink
+          content:
+            application/schema+json:
+              schema:
+                $ref: ./StructureDefinition-SmartHealthLink.schema.json
+components:
+  schemas:
+    StructureDefinition-SmartHealthLink:
+      $schema: https://json-schema.org/draft/2020-12/schema
+      $id: http://smart.who.int/trust-phw/StructureDefinition-SmartHealthLink.schema.json
+      title: Smart Health Link (DRAFT)
+      description: 'Smart Health Link URI (DRAFT)
+
+
+        Logical Model to represent a SMART Health Link as its URI.  It is generated
+        from the content of the SMART Health Link Payload.
+
+
+
+        '
+      type: object
+      properties:
+        u:
+          type: string
+          description: URI of the Smart Health Link.  Should look like 'shlink:/eyJ1cmwiOiJodHRwczovL2Vo....'
+      required:
+      - u
+      fhir:logicalModel: http://smart.who.int/trust-phw/StructureDefinition/SmartHealthLink
+      fhir:parent: http://hl7.org/fhir/StructureDefinition/Base
