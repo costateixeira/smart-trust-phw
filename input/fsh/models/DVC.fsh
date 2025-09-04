@@ -12,6 +12,8 @@ Description:  "Data elements for Digital Vaccination Certificate."
 * sex 0..1 code "Sex" "Sex"
 * nationality 0..1 code "Nationality" "Nationality"
 * nid 0..1 Identifier "National Identification Document" "National Identification Document"
+* ndt 0..1 code "National ID Document Type"
+* ndt from $identifierTypeVS (extensible)
 * guardian 0..1 string "Parent/Guardian" "Name of Parent or Guardian"
 * issuer 0..1 Reference(Organization) "Document issuer" "Document issuer"
 * vaccineDetails 1..* VaccineDetails "Vaccine Details" "Vaccine Details"
