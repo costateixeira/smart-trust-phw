@@ -9,7 +9,7 @@ A SMART Health Link URI is generated from this payload according to the algorith
 
 "
 Characteristics: #can-be-target
-* ^url = "http://hl7.org/fhir/uv/smart-health-cards-and-links/StructureDefinition/SMARTHealthLinkPayload"
+* ^url = "http://smart.who.int/trust-phw/StructureDefinition/SMARTHealthLinkPayload"
 * ^version = "RC2"
 * ^status = #draft
 * type 0..0

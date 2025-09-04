@@ -11,7 +11,7 @@ Characteristics: #can-be-target
 * ^status = #draft
 * type 1..1
 * type from HL_TYPE (preferred)
-* type obeys is-a-verifiable-health-link
+//* type obeys is-a-verifiable-health-link
 
 
 Invariant: is-a-verifiable-health-link

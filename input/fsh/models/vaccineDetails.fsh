@@ -26,7 +26,7 @@ Description:  "Vaccine Data elements for the Digital Vaccination Certificates"
 * clinicianName 0..1 string "Name of supervising clinician" "Name of supervising clinician, or relevant authority responsible for issuing this certificate, or for overseeing the administering centre"
 * batchNo 1..1 CodeableConcept "Batch No" "Batch No"
 * validityPeriod 0..1 Period "Certificate validity period" "Certificate validity period"
-* obeys must-have-issuer-or-clinician
+//* obeys must-have-issuer-or-clinician
 
 Invariant: must-have-issuer-or-clinician
 Description: "Either issuer or clinicianName must be present"

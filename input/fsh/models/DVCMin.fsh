@@ -28,7 +28,7 @@ Description:     "DVC Vaccine Details for a ininmial DVC payload for use within 
 * bo 1..1 string "Batch No"
 * vls 0..1 date "Certificate Validity periods start date"
 * vle 0..1 date "Certificate Validity periods end date"
-* obeys must-have-issuer-or-clinician-name
+//* obeys must-have-issuer-or-clinician-name
 
 
 Logical:         DVCMinVaccineDetailsPreQual

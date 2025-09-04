@@ -7,7 +7,7 @@ Logical Model to represent a SMART Health Link as its URI.  It is generated from
 
 "
 
-* ^url = "http://smart.who.int/trust/StructureDefinition/SmartHealthLink"
+* ^url = "http://smart.who.int/trust-phw/StructureDefinition/SmartHealthLink"
 * ^version = "RC2"
 * ^status = #draft
 * u 1..1 string "URI" "URI of the Smart Health Link.  Should look like 'shlink:/eyJ1cmwiOiJodHRwczovL2Vo....' "
