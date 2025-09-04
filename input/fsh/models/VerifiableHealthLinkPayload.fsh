@@ -8,7 +8,7 @@ This logical model constrains the Health Link Payload for a Verifiable Health Li
 Characteristics: #can-be-target
 //* ^url = "https://profiles.ihe.net/ITI/VHL/StructureDefinition/VerifiableHealthLinkPayload"
 * ^version = "RC2"
-* ^status = #draft
+* ^status = #active
 * type 1..1
 * type from HL_TYPE (preferred)
 //* type obeys is-a-verifiable-health-link

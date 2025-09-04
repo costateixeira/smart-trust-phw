@@ -3,7 +3,7 @@ Alias: $identifierType = http://terminology.hl7.org/CodeSystem/v2-0203
 Logical:         DVCMin
 Title:           "DVC HCERT Payload"
 Description:     "Mininmial DVC payload for use within an HCERT Payload"
-* ^status = #draft
+* ^status = #active
 * ^abstract = true
 * n 1..1 string "Person name"
 * dob 1..1 date "Date of birth in YYYY-MM-DD format"
@@ -19,7 +19,7 @@ Description:     "Mininmial DVC payload for use within an HCERT Payload"
 Logical: DVCMinVaccineDetails
 Title:  "DVC HCert Vaccine Details (Minimal)"
 Description:     "DVC Vaccine Details for a ininmial DVC payload for use within an HCERT Payload"
-* ^status = #draft
+* ^status = #active
 * ^abstract = true
 * vp 1..1 string "ICVP Product Catalog ID"
 * dt 1..1 date "Date of vaccination, YYYY-MM-DD format"
@@ -36,7 +36,7 @@ Parent:          DVCMinVaccineDetails
 Title:           "DVC HCERT Payload for PreQual DB"
 Description:     "DVC payload for a minimal DVC for use within an HCERT Payload using the WHO PreQual Vaccine Database"
 * ^version = "1"
-* ^status = #draft
+* ^status = #active
 * ^abstract = false
 * vp from $PreQualProductIdsVS (required)
 

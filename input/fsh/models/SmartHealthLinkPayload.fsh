@@ -11,5 +11,5 @@ A SMART Health Link URI is generated from this payload according to the algorith
 Characteristics: #can-be-target
 * ^url = "http://smart.who.int/trust-phw/StructureDefinition/SMARTHealthLinkPayload"
 * ^version = "RC2"
-* ^status = #draft
+* ^status = #active
 * type 0..0

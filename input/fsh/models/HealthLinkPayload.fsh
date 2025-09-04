@@ -8,7 +8,7 @@ A Health Link URI is generated from this payload according to the algorithm docu
 "
 //* ^url = "http://hl7.org/fhir/uv/trust-phw/StructureDefinition/HealthLinkPayload"
 * ^version = "RC2"
-* ^status = #draft
+* ^status = #active
 *  url 1..1 string "url" "Manifest URL for this Health Link"
 *  key 1..1 string "Decryption key for processing files returned in the manifest. 43 characters, consisting of 32 random bytes base64urlencoded."
 *  exp 0..1 string "Optional. Number representing expiration time in Epoch seconds, as a hint to help the Health Link Receiving Application determine if this QR is stale. (Note: epoch times should be parsed into 64-bit numeric types.)"
