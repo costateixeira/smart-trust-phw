@@ -3,7 +3,7 @@ canonical: http://smart.who.int/trust-phw
 name: trust-phw
 title: GDHCN Trust Network - Personal Health Wallet 
 description: Describes common workflows and specifications for usage of personal health wallets on the WHO GDHCN Trust Network
-status: draft # draft | active | retired | unknown
+status: active # draft | active | retired | unknown
 experimental: false
 version: 0.1.0
 fhirVersion: 4.0.1 # https://www.hl7.org/fhir/valueset-FHIR-version.html
@@ -19,6 +19,7 @@ publisher:
 
 parameters:
   produce-jekyll-data: true
+  propagate-status: true
 
 dependencies:
 #  hl7.fhir.core:
